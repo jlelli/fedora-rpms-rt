@@ -1016,6 +1016,10 @@ git am %{patches}
 
 # END OF PATCH APPLICATIONS
 
+if [ -f localversion-rt ]; then
+   rm -f localversion-rt
+fi
+
 # Any further pre-build tree manipulations happen here.
 
 chmod +x scripts/checkpatch.pl
