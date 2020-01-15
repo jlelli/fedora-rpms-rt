@@ -26,7 +26,7 @@ Summary: The Linux kernel
 %global zcpu `nproc --all`
 %endif
 
-# define buildid .local
+%define buildid .rt5
 
 # baserelease defines which build revision of this kernel version we're
 # building.  We used to call this fedora_build, but the magical name
@@ -576,6 +576,9 @@ Patch527: 0001-crypto-ccp-Release-all-allocated-memory-if-sha-type-.patch
 
 # https://gitlab.freedesktop.org/drm/intel/issues/673
 Patch612: drm-i915-gt-Detect-if-we-miss-WaIdleLiteRestore.patch
+
+# PREEMPT_RT v5.4.12-rt5
+Patch613: f30-5.4.12-rt5.patch
 
 # END OF PATCH DEFINITIONS
 
