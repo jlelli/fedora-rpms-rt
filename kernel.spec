@@ -56,7 +56,7 @@ Summary: The Linux kernel
 %global zipsed -e 's/\.ko$/\.ko.xz/'
 %endif
 
-# define buildid .local
+%define buildid .rt5
 
 %if 0%{?fedora}
 %define primary_target fedora
@@ -923,6 +923,9 @@ Patch519: vboxguest-fixes.patch
 
 # rhbz 1830150
 Patch520: 0001-platform-x86-sony-laptop-SNC-calls-should-handle-BUF.patch
+
+# RT
+Patch521: rt-Apply-v5.6.10-rt5-changes-as-single-patch.patch
 
 # END OF PATCH DEFINITIONS
 
